@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CALCULATOR</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<style type="text/css">
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxer;
+    font-family: sans-serif;
+  }
+  body{
+    min-width: 300px;
+  }
+  .container-fluid{
+    height: 100vh;
+    width: 100%;
+    background: #2d3436;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main{
+    border: 2px solid #28F3F1;
+    height: 558px;
+    width: 414px;
+    padding: 6px;
+  }
+  input[type=text]{
+    position: relative;
+    width: 100%;
+    height: 106px;
+    background: #fff;
+    text-align: -webkit-right;
+    font-size: 45px;
+    color: #4b4b4b;
+    overflow-x: scroll !important;
+  }
+  input[type=button],input[type=reset]{
+    position: relative;
+    background: transparent;
+    font-size: 28px;
+    border: 2px solid yellowgreen;
+    margin: 2px 10px;
+    margin: 5px 4px;
+    background-image: linear-gradient(#DD67FA,#26B7FA);
+    border-radius: 10px;
+    padding: 16px 34px;
+    text-align: center;
+  }
+  #point{
+    width: 88px;
+  }
+  #minus_btn{
+    width: 86px;
+  }
+  #reset_btn{
+    width: 190px; 
+  }
+  #percent{
+    width: 86px;
+  }
+  #divide{
+    width: 88px;
+  }
+  #equal{
+    width: 183px;
+  }
+  #dual_zero{
+    width: 89px;
+    padding-left: 27px;
+  }
+
+  @media only screen and (max-width: 470px) {
+      input[type=button],input[type=reset]{
+    position: relative;
+    background: transparent;
+    font-size: 20px;
+    border: 2px solid yellowgreen;
+    margin: 2px 7px;
+    margin: 3px 2px;
+    background-image: linear-gradient(#DD67FA,#26B7FA);
+    border-radius: 10px;
+    padding: 10px 28px;
+    text-align: center;
+  }
+  }
+</style>
+<body>
+<div class="container-fluid">
+  <div class="main">
+    <form name="form">
+      <input type="text" name="input" align="right" id="main_input"readonly>
+      <input type="button" value="1" onclick="form.input.value+='1'">
+      <input type="button" value="2" onclick="form.input.value+='2'">
+      <input type="button" value="3" onclick="form.input.value+='3'">
+      <input type="button" value="+" onclick="form.input.value+='+'">
+      
+
+      <input type="button" value="4" onclick="form.input.value+='4'">
+      <input type="button" value="5" onclick="form.input.value+='5'">
+      <input type="button" value="6" onclick="form.input.value+='6'">
+      <input type="button" value="-" onclick="form.input.value+='-'" id="minus_btn">
+
+      <input type="button" value="7" onclick="form.input.value+='7'">
+      <input type="button" value="8" onclick="form.input.value+='8'">
+      <input type="button" value="9" onclick="form.input.value+='9'">
+      <input type="button" value="x" onclick="form.input.value+='*'">
+
+
+          
+      <input type="button" value="." onclick="form.input.value+='.'" id="point">
+      <input type="button" value="0" onclick="form.input.value+='0'">  
+      <input type="button" value="00" onclick="form.input.value+='00'" id="dual_zero">
+      <input type="button" value="/" onclick="form.input.value+='/'" id="divide">
+
+      <input type="reset" value="A\C" onclick="form.input.value+=''" id="reset_btn">
+      <input type="button" value="=" onclick="form.input.value=(eval(form.input.value))" id="equal">
+      
+      
+</form>
+  </div>
+</div>
+
+</body>
+</html>
